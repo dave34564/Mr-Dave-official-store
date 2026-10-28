@@ -1,110 +1,184 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MR DAVE STORE | Luxury Fashion</title>
+<meta name="theme-color" content="#111111">
+<title>MR DAVE GLOBAL STORE</title>
 <style>
-:root{--gold:#d4af37;--black:#0b0b0b;--panel:#171717}
 *{box-sizing:border-box}
-body{margin:0;background:var(--black);color:#fff;font-family:Arial,sans-serif}
-header{padding:22px 16px;text-align:center;border-bottom:1px solid #383024}
-.logo{font-size:25px;font-weight:900;letter-spacing:3px;color:var(--gold)}
-header p{color:#ccc;font-size:12px;letter-spacing:2px}
-nav{display:flex;justify-content:center;gap:22px;padding:15px}
-nav a{color:white;text-decoration:none;font-size:13px}
-.hero{text-align:center;padding:45px 16px;background:linear-gradient(135deg,#242017,#090909 70%)}
-.hero small{color:var(--gold);letter-spacing:3px}
-.hero h1{font-size:clamp(30px,8vw,48px);margin:14px 0}
-.hero p{color:#ccc;line-height:1.6}
-.gold{color:var(--gold)}
-button{cursor:pointer;border:0;padding:12px 14px;font-weight:bold}
-.shop{background:var(--gold);color:#111;margin-top:12px}
-.section{padding:26px 14px}
-.section h2{text-align:center;color:var(--gold);letter-spacing:2px}
-.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
-.card{background:var(--panel);border:1px solid #292929;border-radius:8px;overflow:hidden}
-.card img{display:block;width:100%;height:165px;object-fit:cover;background:#292929}
-.details{padding:11px}
-.details h3{font-size:14px;margin:4px 0 8px}
-.price{color:var(--gold);font-weight:bold;margin-bottom:10px}
-.add{background:var(--gold);width:100%;border-radius:4px}
-.cart{margin:14px;background:#171717;padding:18px;border:1px solid #514323;border-radius:8px}
-.cart h2{color:var(--gold)}
-.cart-row{display:flex;justify-content:space-between;gap:8px;margin:12px 0;font-size:13px}
-.cart-row button{padding:4px 8px}
-.checkout{width:100%;background:var(--gold);margin-top:10px}
-footer{text-align:center;padding:28px 15px;color:#bbb;border-top:1px solid #333;font-size:12px}
-@media(min-width:650px){.products{grid-template-columns:repeat(3,minmax(0,1fr))}.card img{height:230px}}
+body{margin:0;font-family:Arial,sans-serif;background:#f7f6f2;color:#171717}
+header{background:#111;color:white;text-align:center;padding:25px 12px}
+.logo{color:#e5bd57;font-size:27px;font-weight:900}
+header p{margin:8px 0;color:#eee;font-size:14px}
+nav{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;padding:13px;background:#202020}
+nav a{color:white;text-decoration:none;font-size:14px}
+.hero{background:linear-gradient(120deg,#111,#39301c);color:white;text-align:center;padding:38px 15px}
+.hero h1{font-size:29px;margin:0 0 12px}
+.hero p{line-height:1.6;color:#eee}
+.gold{color:#e5bd57}
+button{cursor:pointer}
+.shop-title{text-align:center;margin:25px 10px 15px}
+.shop-title h2{margin-bottom:6px}
+.filters{display:flex;gap:8px;overflow-x:auto;padding:12px;margin-bottom:10px}
+.filters button{white-space:nowrap;border:1px solid #c5a34b;border-radius:22px;padding:10px 14px;background:white}
+.filters button.active,.gold-btn{background:#d5ad46;color:#111;border-color:#d5ad46}
+.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:12px}
+.product{background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 9px #00000012}
+.product img{width:100%;height:190px;object-fit:cover;display:block;background:#eee}
+.product-info{padding:11px}
+.product h3{font-size:15px;margin:3px 0 8px}
+.category{font-size:11px;color:#777}
+.price{font-size:16px;font-weight:bold;margin:8px 0}
+.product button,.checkout,.remove{width:100%;border:0;padding:12px;border-radius:6px;font-weight:bold}
+.product button{background:#171717;color:#e5bd57}
+section{scroll-margin-top:10px}
+.cart{margin:15px 12px 25px;padding:17px;background:white;border-radius:12px}
+.cart h2{margin-top:0}
+.cart-item{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #eee;padding:10px 0;font-size:14px}
+.remove{width:auto;padding:6px 10px;background:#eee;color:#111}
+.total{font-size:19px;font-weight:bold;margin:18px 0}
+.checkout{background:#18864b;color:white;font-size:16px}
+.note{font-size:12px;color:#666;line-height:1.5}
+footer{background:#111;color:white;text-align:center;padding:25px 15px;line-height:1.8}
+@media(min-width:650px){.products{grid-template-columns:repeat(3,minmax(0,1fr));padding:20px;gap:20px}.product img{height:260px}.hero h1{font-size:42px}}
+@media(min-width:950px){.products{grid-template-columns:repeat(4,minmax(0,1fr));max-width:1200px;margin:auto}}
 </style>
 </head>
 <body>
+
 <header>
-  <div class="logo">MR DAVE STORE</div>
-  <p>STYLE • CLASS • CONFIDENCE</p>
+<div class="logo">MR DAVE GLOBAL STORE</div>
+<p>Everything You Love, All in One Place</p>
 </header>
-<nav><a href="#clothes">Clothes</a><a href="#shoes">Shoes</a><a href="#cart">My Cart 🛍️</a></nav>
-<section class="hero">
-  <small>THE LUXURY COLLECTION</small>
-  <h1>Dress Like <span class="gold">You Mean It.</span></h1>
-  <p>Discover stylish clothes and shoes that match your confidence.</p>
-  <a href="#clothes"><button class="shop">EXPLORE COLLECTION</button></a>
+
+<nav>
+<a href="#shop">Shop</a>
+<a href="#shop" onclick="setCategory('Clothes')">Clothes</a>
+<a href="#shop" onclick="setCategory('Shoes')">Shoes</a>
+<a href="#shop" onclick="setCategory('Bags')">Bags</a>
+<a href="#shop" onclick="setCategory('Phones')">Phones</a>
+<a href="#cart">My Cart 🛒 (<span id="cart-count">0</span>)</a>
+</nav>
+
+<div class="hero">
+<h1>WELCOME TO <span class="gold">DAVE GLOBAL</span></h1>
+<p>Fashion, phones, home essentials and accessories.<br>Discover your style. Shop with confidence.</p>
+<a href="#shop"><button class="gold-btn" style="padding:13px 24px;border-radius:6px;font-weight:bold">SHOP NOW</button></a>
+</div>
+
+<section id="shop">
+<div class="shop-title">
+<h2>OUR COLLECTION</h2>
+<p>Find something you love ✨</p>
+</div>
+<div class="filters" id="filters"></div>
+<div class="products" id="products"></div>
 </section>
-<section class="section" id="clothes">
-  <h2>PREMIUM CLOTHING</h2>
-  <div class="products" id="clothing-list"></div>
+
+<section id="cart" class="cart">
+<h2>🛒 Your Shopping Cart</h2>
+<div id="cart-items">Your cart is empty. Add products to start shopping!</div>
+<div class="total">Total: <span id="total">₦0</span></div>
+<button class="checkout" onclick="checkout()">ORDER ON WHATSAPP</button>
+<p class="note">Your order will be sent to our WhatsApp for confirmation. Confirm product availability, delivery charges and payment arrangements before paying.</p>
 </section>
-<section class="section" id="shoes">
-  <h2>STEP IN STYLE</h2>
-  <div class="products" id="shoe-list"></div>
-</section>
-<section class="cart" id="cart">
-  <h2>🛍️ Your Shopping Cart</h2>
-  <div id="cart-items">Your cart is empty.</div>
-  <div class="cart-row"><strong>Total</strong><strong id="total">₦0</strong></div>
-  <button class="checkout" onclick="checkout()">ORDER ON WHATSAPP</button>
-  <p style="font-size:12px;color:#bbb">Payment and delivery will be confirmed when you order.</p>
-</section>
-<footer>© 2026 MR DAVE STORE • LUXURY WITHIN REACH</footer>
+
+<footer>
+<strong class="gold">MR DAVE GLOBAL STORE</strong>
+<p>Fashion • Electronics • Home Essentials • Accessories</p>
+<p>Contact us on WhatsApp: 07083347251</p>
+<p>© 2026 MR DAVE GLOBAL STORE</p>
+</footer>
+
 <script>
+const categories=["All","Clothes","Shoes","Bags","Phones","Duvets","Caps","Eyeglasses"];
+
 const products=[
-{id:1,name:"Classic Black T-Shirt",price:12000,type:"clothes",image:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"},
-{id:2,name:"Luxury White Shirt",price:18000,type:"clothes",image:"https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=600&q=80"},
-{id:3,name:"Premium Jacket",price:35000,type:"clothes",image:"https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80"},
-{id:4,name:"Everyday Sneakers",price:28000,type:"shoes",image:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"},
-{id:5,name:"Classic White Sneakers",price:32000,type:"shoes",image:"https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80"},
-{id:6,name:"Luxury Leather Shoes",price:40000,type:"shoes",image:"https://images.unsplash.com/photo-1614252369475-531eba835eb1?auto=format&fit=crop&w=600&q=80"}
+{id:1,name:"Classic T-Shirt",category:"Clothes",price:12000,img:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"},
+{id:2,name:"Stylish Shirt",category:"Clothes",price:18000,img:"https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80"},
+{id:3,name:"Fashion Jacket",category:"Clothes",price:35000,img:"https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80"},
+{id:4,name:"Women's Fashion",category:"Clothes",price:22000,img:"https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&q=80"},
+{id:5,name:"Classic Sneakers",category:"Shoes",price:28000,img:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"},
+{id:6,name:"Casual Shoes",category:"Shoes",price:32000,img:"https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80"},
+{id:7,name:"Elegant Handbag",category:"Bags",price:25000,img:"https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80"},
+{id:8,name:"Everyday Backpack",category:"Bags",price:20000,img:"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"},
+{id:9,name:"Android Smartphone",category:"Phones",price:150000,img:"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80"},
+{id:10,name:"Premium Smartphone",category:"Phones",price:350000,img:"https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=600&q=80"},
+{id:11,name:"Luxury Duvet Set",category:"Duvets",price:45000,img:"https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=600&q=80"},
+{id:12,name:"Soft Bedding Set",category:"Duvets",price:38000,img:"https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=600&q=80"},
+{id:13,name:"Classic Baseball Cap",category:"Caps",price:8000,img:"https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80"},
+{id:14,name:"Fashion Sunglasses",category:"Eyeglasses",price:10000,img:"https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80"},
+{id:15,name:"Modern Eyeglasses",category:"Eyeglasses",price:12000,img:"https://images.unsplash.com/photo-1574258495973-f010dfbb5371?auto=format&fit=crop&w=600&q=80"},
+{id:16,name:"Women's Sneakers",category:"Shoes",price:26000,img:"https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80"}
 ];
+
 let cart=[];
-const naira=n=>"₦"+n.toLocaleString("en-NG");
+let currentCategory="All";
+const money=n=>"₦"+n.toLocaleString("en-NG");
+
+function renderFilters(){
+document.getElementById("filters").innerHTML=categories.map(c=>
+`<button class="${c===currentCategory?'active':''}" onclick="setCategory('${c}')">${c}</button>`
+).join("");
+}
+
 function renderProducts(){
- for(const [type,target] of [["clothes","clothing-list"],["shoes","shoe-list"]]){
-  const list=document.getElementById(target);
-  list.innerHTML="";
-  products.filter(p=>p.type===type).forEach(p=>{
-   const card=document.createElement("article");
-   card.className="card";
-   card.innerHTML=`<img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'"><div class="details"><h3>${p.name}</h3><div class="price">${naira(p.price)}</div><button class="add" onclick="addToCart(${p.id})">ADD TO CART</button></div>`;
-   list.appendChild(card);
-  });
- }
+const list=products.filter(p=>currentCategory==="All"||p.category===currentCategory);
+document.getElementById("products").innerHTML=list.map(p=>`
+<div class="product">
+<img src="${p.img}" alt="${p.name}" loading="lazy">
+<div class="product-info">
+<div class="category">${p.category}</div>
+<h3>${p.name}</h3>
+<div class="price">${money(p.price)}</div>
+<button onclick="addToCart(${p.id})">ADD TO CART</button>
+</div>
+</div>`).join("");
 }
-function addToCart(id){cart.push(products.find(p=>p.id===id));renderCart();document.getElementById("cart").scrollIntoView({behavior:"smooth"});}
+
+function setCategory(c){
+currentCategory=c;
+renderFilters();
+renderProducts();
+}
+
+function addToCart(id){
+const p=products.find(x=>x.id===id);
+const item=cart.find(x=>x.id===id);
+if(item)item.qty++;
+else cart.push({...p,qty:1});
+renderCart();
+}
+
+function removeItem(id){
+cart=cart.filter(x=>x.id!==id);
+renderCart();
+}
+
 function renderCart(){
- const box=document.getElementById("cart-items");
- if(!cart.length){box.textContent="Your cart is empty.";}
- else{box.innerHTML="";cart.forEach((p,i)=>{const row=document.createElement("div");row.className="cart-row";const name=document.createElement("span");name.textContent=p.name+" — "+naira(p.price);const remove=document.createElement("button");remove.textContent="Remove";remove.onclick=()=>{cart.splice(i,1);renderCart()};row.append(name,remove);box.appendChild(row);});}
- document.getElementById("total").textContent=naira(cart.reduce((sum,p)=>sum+p.price,0));
+document.getElementById("cart-count").textContent=cart.reduce((s,p)=>s+p.qty,0);
+document.getElementById("cart-items").innerHTML=cart.length?cart.map(p=>`
+<div class="cart-item">
+<div>${p.name} × ${p.qty}<br><strong>${money(p.price*p.qty)}</strong></div>
+<button class="remove" onclick="removeItem(${p.id})">Remove</button>
+</div>`).join(""):"Your cart is empty. Add products to start shopping!";
+document.getElementById("total").textContent=money(cart.reduce((s,p)=>s+p.price*p.qty,0));
 }
+
 function checkout(){
- if(!cart.length){alert("Please add a product to your cart first.");return;}
- const lines=cart.map(p=>"- "+p.name+" ("+naira(p.price)+")").join("\n");
- const total=naira(cart.reduce((sum,p)=>sum+p.price,0));
- const message="Hello MR Dave Store! I want to order:\n"+lines+"\nTotal: "+total+"\nPlease confirm availability, payment and delivery.";
- window.open("https://wa.me/2347083347251?text="+encodeURIComponent(message),"_blank");
+if(!cart.length){alert("Please add a product to your cart first.");return;}
+const lines=cart.map(p=>`${p.name} x ${p.qty} = ${money(p.price*p.qty)}`).join("\n");
+const total=money(cart.reduce((s,p)=>s+p.price*p.qty,0));
+const message=`Hello MR DAVE GLOBAL STORE! I want to order:\n${lines}\nTotal: ${total}\nPlease confirm availability and delivery details.`;
+window.open("https://wa.me/2347083347251?text="+encodeURIComponent(message),"_blank");
 }
-renderProducts();renderCart();
+
+renderFilters();
+renderProducts();
+renderCart();
 </script>
 </body>
 </html>
