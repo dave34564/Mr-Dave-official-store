@@ -181,4 +181,262 @@ renderProducts();
 renderCart();
 </script>
 </body>
+<!-- MR DAVE GLOBAL STORE - NEW PRODUCTS -->
+<section id="new-products">
+  <h2>NEW ARRIVALS</h2>
+
+  <div class="product-grid">
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=600&q=80" alt="Joggers">
+      <h3>Fashion Joggers</h3>
+      <p>Stock: 5 pieces</p>
+      <p>₦15,000</p>
+      <button onclick="orderProduct('Fashion Joggers', 15000)">Order on WhatsApp</button>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Shoes">
+      <h3>Fashion Shoes</h3>
+      <p>Stock: 10 pairs</p>
+      <p>₦25,000</p>
+      <button onclick="orderProduct('Fashion Shoes', 25000)">Order on WhatsApp</button>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80" alt="T shirt">
+      <h3>T-Shirts</h3>
+      <p>Stock: 20 pieces</p>
+      <p>₦8,000</p>
+      <button onclick="orderProduct('T-Shirts', 8000)">Order on WhatsApp</button>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80" alt="Unisex shirt">
+      <h3>Unisex Shirts</h3>
+      <p>Stock: 20 pieces</p>
+      <p>₦12,000</p>
+      <button onclick="orderProduct('Unisex Shirts', 12000)">Order on WhatsApp</button>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=600&q=80" alt="Trousers">
+      <h3>Fashion Trousers</h3>
+      <p>Stock: 20 pieces</p>
+      <p>₦15,000</p>
+      <button onclick="orderProduct('Fashion Trousers', 15000)">Order on WhatsApp</button>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80" alt="Eyeglasses">
+      <h3>Eyeglasses</h3>
+      <p>Stock: 10 pieces</p>
+      <p>₦7,000</p>
+      <button onclick="orderProduct('Eyeglasses', 7000)">Order on WhatsApp</button>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=600&q=80" alt="Duvet bedding">
+      <h3>Duvet Sets</h3>
+      <p>Stock: 10 pieces</p>
+      <p>₦35,000</p>
+      <button onclick="orderProduct('Duvet Sets', 35000)">Order on WhatsApp</button>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80" alt="Bags">
+      <h3>Men's & Women's Bags</h3>
+      <p>Stock: 20 pieces</p>
+      <p>₦18,000</p>
+      <button onclick="orderProduct('Mens and Womens Bags', 18000)">Order on WhatsApp</button>
+    </article>
+
+  </div>
+</section>
+
+<style>
+#new-products {
+  padding: 25px 12px;
+  background: #111;
+  color: #d4af37;
+  font-family: Arial, sans-serif;
+}
+#new-products h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+#new-products .product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+#new-products .product {
+  background: #202020;
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+}
+#new-products img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+#new-products button {
+  background: #d4af37;
+  color: #111;
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 6px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
+
+<script>
+function orderProduct(name, price) {
+  const phone = "2347083347251";
+  const message =
+    "Hello MR DAVE GLOBAL STORE, I want to order: " +
+    name + ". Price: ₦" + price.toLocaleString("en-NG");
+
+  window.open(
+    "https://wa.me/" + phone + "?text=" +
+    encodeURIComponent(message),
+    "_blank"
+  );
+}
+</script>
+
+<!-- MR DAVE GLOBAL STORE - NEW PRODUCTS -->
+<section id="new-products">
+  <h2>NEW ARRIVALS</h2>
+
+  <div class="product-grid">
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=600&q=80" alt="Joggers">
+      <h3>Fashion Joggers</h3>
+      <p>Stock: 5 pieces</p>
+      <p>₦15,000</p>
+      <button onclick="orderProduct('Fashion Joggers', 15000)">Order on WhatsApp</button>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Shoes">
+      <h3>Fashion Shoes</h3>
+      <p>Stock: 10 pairs</p>
+      <p>₦25,000</p>
+      <button onclick="orderProduct('Fashion Shoes', 25000)">Order on WhatsApp</button>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80" alt="T shirt">
+      <h3>T-Shirts</h3>
+      <p>Stock: 20 pieces</p>
+      <p>₦8,000</p>
+      <button onclick="orderProduct('T-Shirts', 8000)">Order on WhatsApp</button>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80" alt="Unisex shirt">
+      <h3>Unisex Shirts</h3>
+      <p>Stock: 20 pieces</p>
+      <p>₦12,000</p>
+      <button onclick="orderProduct('Unisex Shirts', 12000)">Order on WhatsApp</button>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=600&q=80" alt="Trousers">
+      <h3>Fashion Trousers</h3>
+      <p>Stock: 20 pieces</p>
+      <p>₦15,000</p>
+      <button onclick="orderProduct('Fashion Trousers', 15000)">Order on WhatsApp</button>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80" alt="Eyeglasses">
+      <h3>Eyeglasses</h3>
+      <p>Stock: 10 pieces</p>
+      <p>₦7,000</p>
+      <button onclick="orderProduct('Eyeglasses', 7000)">Order on WhatsApp</button>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=600&q=80" alt="Duvet bedding">
+      <h3>Duvet Sets</h3>
+      <p>Stock: 10 pieces</p>
+      <p>₦35,000</p>
+      <button onclick="orderProduct('Duvet Sets', 35000)">Order on WhatsApp</button>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80" alt="Bags">
+      <h3>Men's & Women's Bags</h3>
+      <p>Stock: 20 pieces</p>
+      <p>₦18,000</p>
+      <button onclick="orderProduct('Mens and Womens Bags', 18000)">Order on WhatsApp</button>
+    </article>
+
+  </div>
+</section>
+
+<style>
+#new-products {
+  padding: 25px 12px;
+  background: #111;
+  color: #d4af37;
+  font-family: Arial, sans-serif;
+}
+#new-products h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+#new-products .product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+#new-products .product {
+  background: #202020;
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+}
+#new-products img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+#new-products button {
+  background: #d4af37;
+  color: #111;
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 6px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
+
+<script>
+function orderProduct(name, price) {
+  const phone = "2347083347251";
+  const message =
+    "Hello MR DAVE GLOBAL STORE, I want to order: " +
+    name + ". Price: ₦" + price.toLocaleString("en-NG");
+
+  window.open(
+    "https://wa.me/" + phone + "?text=" +
+    encodeURIComponent(message),
+    "_blank"
+  );
+}
+</script>
+
 </html>
