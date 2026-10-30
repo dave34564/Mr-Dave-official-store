@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MR DAVE GLOBAL STORE - Admin</title>
+  <style>
+    body { background:#111; color:#fff; font-family:Arial,sans-serif; padding:20px; }
+    .box { max-width:480px; margin:30px auto; background:#222; padding:22px; border-radius:14px; }
+    h2 { color:gold; text-align:center; }
+    input, button { width:100%; box-sizing:border-box; padding:13px; margin:9px 0; border-radius:7px; }
+    input { border:1px solid #777; background:#333; color:white; }
+    button { background:gold; color:#111; border:0; font-weight:bold; }
+    #dashboard { display:none; }
+    #message { color:gold; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>MR DAVE GLOBAL STORE</h2>
+    <h3>Admin Login</h3>
+    <input id="email" type="email" placeholder="Admin email">
+    <input id="password" type="password" placeholder="Password">
+    <button id="login">Login</button>
+    <p id="message"></p>
+
+    <div id="dashboard">
+      <h3>Add New Product</h3>
+      <input id="name" placeholder="Product name">
+      <input id="price" type="number" placeholder="Price in Naira">
+      <input id="category" placeholder="Category">
+      <input id="image" type="url" placeholder="Product image URL">
+      <button id="save">Save Product</button>
+      <button id="logout">Logout</button>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+  <script>
+    const firebaseConfig = {Ojb7X21fq2e71CO2D8jVkLzcwTj1
+    
+
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    const message = document.getElementById("message");
+    const dashboard = document.getElementById("dashboard");
+
+    document.getElementById("login").onclick = async () => {
+      try {
+        await auth.signInWithEmailAndPassword(
+          document.getElementById("email").value,
+          document.getElementById("password").value
+        );
+        message.textContent = "Login successful!";
+      } catch (error) {
+        message.textContent = error.message;
+      }
+    };
+
+    auth.onAuthStateChanged(user => {
+      dashboard.style.display = user ? "block" : "none";
+    });
+
+    document.getElementById("save").onclick = async () => {
+      const name = document.getElementById("name").value.trim();
+      const price = Number(document.getElementById("price").value);
+      const category = document.getElementById("category").value.trim();
+      const image = document.getElementById("image").value.trim();
+
+      if (!name || !price || !category || !image) {
+        message.textContent = "Please complete all product details.";
+        return;
+      }
+
+      try {
+        await db.collection("products").add({
+          name, price, category, image,
+          createdAt: firebase.firestore.FieldValue.serverTimestamp()
+        });
+        message.textContent = "Product saved successfully!";
+        ["name", "price", "category", "image"].forEach(id => {
+          document.getElementById(id).value = "";
+        });
+      } catch (error) {
+        message.textContent = error.message;
+      }
+    };
+
+    document.getElementById("logout").onclick = () => auth.signOut();
+  </script>
+</body>
+</html>
